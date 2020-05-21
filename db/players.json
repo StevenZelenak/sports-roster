@@ -1,0 +1,32 @@
+{
+  "1": {
+    "name": "Sergen Çelik",
+    "imageUrl": "https://gamepedia.cursecdn.com/lolesports_gamepedia_en/thumb/8/8d/TSM_Broken_Blade_2020_Split_1.png/220px-TSM_Broken_Blade_2020_Split_1.png?version=6d5d189a676a980136a519c38d2d87e8",
+    "position": "Top Laner",
+    "uid": "mReQNsZDjYWZVgaeIAsq6XgGOdP2"
+  },
+  "2": {
+    "name": "Joshua Hartnett",
+    "imageUrl": "https://gamepedia.cursecdn.com/lolesports_gamepedia_en/thumb/a/a1/TSM_Dardoch_2020_Split_1.png/220px-TSM_Dardoch_2020_Split_1.png?version=7ad91f4ead6e3d39a8b119b9e5c227fa",
+    "position": "Jungler",
+    "uid": "mReQNsZDjYWZVgaeIAsq6XgGOdP2"
+  },
+  "3": {
+    "name": "Søren Bjerg",
+    "imageUrl": "https://gamepedia.cursecdn.com/lolesports_gamepedia_en/thumb/9/98/TSM_Bjergsen_2020_Split_1.png/220px-TSM_Bjergsen_2020_Split_1.png?version=854fc4064203b9131487fa4438e3a88d",
+    "position": "Mid Laner",
+    "uid": "mReQNsZDjYWZVgaeIAsq6XgGOdP2"
+  },
+  "4": {
+    "name": "Yiliang Peter Peng",
+    "imageUrl": "https://gamepedia.cursecdn.com/lolesports_gamepedia_en/thumb/3/38/TL_Doublelift_2020_Split_1.png/220px-TL_Doublelift_2020_Split_1.png?version=5bb27b2b967a38ef6519aacefc51300f",
+    "position": "Bot Laner",
+    "uid": "mReQNsZDjYWZVgaeIAsq6XgGOdP2"
+  },
+  "5": {
+    "name": "Vincent Wang",
+    "imageUrl": "https://gamepedia.cursecdn.com/lolesports_gamepedia_en/thumb/7/73/TSM_Biofrost_2020_Split_1.png/220px-TSM_Biofrost_2020_Split_1.png?version=e2fd33df911715f741110685947b2808",
+    "position": "Support",
+    "uid": "y5HzTbiVLVgaxnhQb4HsgQNutvE2"
+  }
+}
