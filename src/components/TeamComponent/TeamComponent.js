@@ -9,15 +9,25 @@ class TeamComponent extends React.Component {
     players: [],
   }
 
-  componentDidMount() {
+  getAllPlayers = () => {
     playersData.getPlayersByUid(authData.getUid())
       .then((players) => this.setState({ players }))
       .catch((err) => console.error('could not get players', err));
   }
 
+  componentDidMount() {
+    this.getAllPlayers();
+  }
+
+  removePlayer = (playerId) => {
+    playersData.deletePlayer(playerId)
+      .then(() => this.getAllPlayers())
+      .catch((err) => console.error('could not delete player: ', err));
+  }
+
   render() {
     const makePlayers = this.state.players.map((player) => (
-      <PlayerCards key={player.id} player={player}/>
+      <PlayerCards key={player.id} player={player} removePlayer={this.removePlayer}/>
     ));
 
     return (
