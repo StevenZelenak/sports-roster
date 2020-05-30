@@ -9,6 +9,7 @@ class TeamComponent extends React.Component {
   state = {
     players: [],
     playerform: false,
+    editPlayer: {},
   }
 
   getAllPlayers = () => {
@@ -39,9 +40,22 @@ class TeamComponent extends React.Component {
       .catch((err) => console.error('unable to save player: ', err));
   }
 
+  editAPlayer = (player) => {
+    this.setState({ playerform: true, editPlayer: player });
+  }
+
+  putPlayer = (playerId, updatedPlayer) => {
+    playersData.updatePlayer(playerId, updatedPlayer)
+      .then(() => {
+        this.getAllPlayers();
+        this.setState({ playerform: false, editPlayer: {} });
+      })
+      .catch((err) => console.error('unable to update player:', err));
+  }
+
   render() {
     const makePlayers = this.state.players.map((player) => (
-      <PlayerCards key={player.id} player={player} removePlayer={this.removePlayer}/>
+      <PlayerCards key={player.id} player={player} editAPlayer={this.editAPlayer} removePlayer={this.removePlayer}/>
     ));
 
     return (
@@ -54,7 +68,7 @@ class TeamComponent extends React.Component {
         </div>
         <div>
           {/* if playerform is true print PlayerForm and pass the saveNewPlayer function to the PlayerForm Component */}
-        { this.state.playerform ? <PlayerForm saveNewPlayer={this.saveNewPlayer}/> : ''}
+        { this.state.playerform ? <PlayerForm saveNewPlayer={this.saveNewPlayer} player={this.state.editPlayer} putPlayer={this.putPlayer} /> : ''}
         </div>
       </div>
     );

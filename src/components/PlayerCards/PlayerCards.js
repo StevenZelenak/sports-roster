@@ -6,14 +6,21 @@ import './PlayerCards.scss';
 
 class PlayerCards extends React.Component {
   static propTypes = {
-    player: playerShape.boardShape,
+    player: playerShape.playerShape,
     removePlayer: PropTypes.func.isRequired,
+    editAPlayer: PropTypes.func.isRequired,
   }
 
   deletePlayerEvent = (e) => {
     e.preventDefault();
     const { player, removePlayer } = this.props;
     removePlayer(player.id);
+  }
+
+  editPlayerEvent = (e) => {
+    e.preventDefault();
+    const { player, editAPlayer } = this.props;
+    editAPlayer(player);
   }
 
   render() {
@@ -26,6 +33,7 @@ class PlayerCards extends React.Component {
             <h5 className="card-title">{player.name}</h5>
             <p className="card-text">{player.position}</p>
             <button className="btn btn-danger" onClick={this.deletePlayerEvent}>X</button>
+            <button className="btn btn-primary" onClick={this.editPlayerEvent} >Update Player</button>
           </div>
       </div>
     </div>
